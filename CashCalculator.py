@@ -11,6 +11,10 @@ class CashCalculator(Calculator):
             [int(self.records[i].amount)
              for i in range(0, int(len(self.records)))
              if self.records[i].date == datetime.now().date()])
-        print(f'Осталось: {self.currency}')
+        print(f'Осталось: {self.currency}$')
         return self.currency
+
+    def get_today_stats(self, date):
+        today_stat = super().get_today_stats(date)
+        print(f'Ваши траты на дату {date} составляют: {today_stat}$')
 

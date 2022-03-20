@@ -12,7 +12,11 @@ cash_calculator.add_record(test_record)
 
 cash_calculator.get_today_cash_remained()
 calorie_calculator.get_calories_remained()
-print(test_record.date)
+
+user_date = input('Type date in format XX.XX.XXXX: ')
+
+cash_calculator.get_today_stats(user_date)
+calorie_calculator.get_today_stats(user_date)
 
 
 
